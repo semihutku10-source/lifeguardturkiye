@@ -1,0 +1,6 @@
+{
+  "name": "Lifeguard Türkiye - Cankurtaran Eğitimi & Sertifikasyon",
+  "description": "TSSF ve ILS akreditasyonlu, e-Devlet onaylı Bronz, Gümüş ve Altın Cankurtaran eğitimi, müfredat ve sertifikasyon merkezi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

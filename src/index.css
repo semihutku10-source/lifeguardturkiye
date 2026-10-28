@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --font-condensed: 'Barlow Condensed', -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: #0f172a;
+    background-color: #f8fafc;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Kurumsal font standardı: Daktilo / Monospace yazı tipleri yerine modern kurumsal font kullanımı */
+  input, select, textarea, button {
+    font-family: var(--font-sans);
+  }
+
+  .font-mono, code, kbd, samp, pre {
+    font-family: var(--font-sans) !important;
+  }
+}
+
+.font-condensed {
+  font-family: var(--font-condensed);
+}
+
+.font-sans-custom {
+  font-family: var(--font-sans);
+}
+
