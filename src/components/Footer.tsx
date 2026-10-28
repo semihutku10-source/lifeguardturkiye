@@ -136,17 +136,25 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Designed by Sporsepeti */}
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-800/80 hover:border-slate-700 transition-colors">
-            <span className="text-[11px] text-slate-400 font-medium">Designed by</span>
-            <span className="flex items-center gap-1.5 font-bold text-white text-xs tracking-tight">
+          <a
+            href="https://www.sporsepeti.com.tr/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Sporsepeti Resmi Web Sitesi"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-800/90 hover:border-slate-600 hover:bg-slate-800/80 active:scale-95 transition-all group"
+          >
+            <span className="text-[11px] text-slate-400 font-medium group-hover:text-slate-300 transition-colors">
+              Designed by
+            </span>
+            <span className="flex items-center gap-1.5 font-bold text-white text-xs tracking-tight group-hover:text-sky-400 transition-colors">
               <img
                 src="/assets/aistudio/images__1__e22ba1d6.jpg"
                 alt="Sporsepeti"
-                className="w-5 h-5 rounded-md object-contain bg-white select-none shadow-xs"
+                className="w-5 h-5 rounded-md object-contain bg-white select-none shadow-xs group-hover:scale-105 transition-transform"
               />
               Sporsepeti
             </span>
-          </div>
+          </a>
 
           <div className="flex items-center gap-3">
             <span>TSSF Yönetmeliklerine Uygundur</span>
