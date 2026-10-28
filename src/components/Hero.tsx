@@ -49,10 +49,89 @@ export const Hero: React.FC<HeroProps> = ({
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main 2-column balanced grid */}
+        {/* Main 2-column balanced grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-          {/* Left Column: Headlines & Actions */}
-          <div className="lg:col-span-7 flex flex-col space-y-6">
-            {/* Accreditation Clean Metadata (Anti-slop, no candy pill wrappers) */}
+          {/* Right Column (now visually first on mobile): Coastal Ocean Rescue Visual Composition */}
+          <div className="lg:col-span-5 lg:order-2 flex justify-center">
+            <div className="relative w-full max-w-lg">
+              {/* Soft decorative water ripple backdrop */}
+              <div className="absolute -inset-2 bg-gradient-to-tr from-sky-400/20 via-cyan-300/15 to-transparent rounded-3xl blur-xl" />
+
+              {/* Main Visual Frame with gentle buoyancy motion */}
+              <div className="relative bg-white rounded-2xl sm:rounded-3xl border border-sky-200/80 shadow-2xl overflow-hidden animate-float-gentle group">
+                {/* Coastal Marine Photography */}
+                <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-900">
+                  <img
+                    src="/assets/images/hero_coastal_ocean_rescue_1793176525153.jpg"
+                    alt="Lifeguard Türkiye Açık Deniz ve Kıyı Güvenlik Eğitimi"
+                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    referrerPolicy="no-referrer"
+                  />
+                  {/* Subtle coastal lighting overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B2545]/85 via-black/20 to-transparent" />
+
+                  {/* Top-right floating accreditation badge */}
+                  <div className="absolute top-3.5 right-3.5 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/60 shadow-md flex items-center gap-2">
+                    <ShieldCheck className="w-4 h-4 text-emerald-600" />
+                    <div>
+                      <div className="text-[11px] font-extrabold text-[#0B2545] leading-tight">TSSF & ILS ONAYLI</div>
+                      <div className="text-[9px] font-medium text-slate-500">Resmi Belgelendirme</div>
+                    </div>
+                  </div>
+
+                  {/* Overlaid Bottom Title & Info inside Image */}
+                  <div className="absolute bottom-3.5 left-4 right-4 text-white">
+                    <div className="flex items-center gap-1.5 text-xs font-semibold text-sky-200 uppercase tracking-wider mb-1">
+                      <LifeBuoy className="w-3.5 h-3.5 text-sky-300 animate-spin" style={{ animationDuration: '12s' }} />
+                      <span>Deniz ve Kıyı Emniyet Parkurları</span>
+                    </div>
+                    <p className="text-sm sm:text-base font-bold text-white leading-snug drop-shadow-sm">
+                      Mavi Bayraklı Plajlar, Tesisler ve Havuzlar İçin Profesyonel Can Güvenliği
+                    </p>
+                  </div>
+                </div>
+
+                {/* Bottom Interactive & Trust Strip */}
+                <div className="p-4 bg-gradient-to-r from-slate-50 to-sky-50/60 border-t border-sky-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
+                  <div className="flex items-center gap-2 text-slate-700">
+                    <MapPin className="w-4 h-4 text-[#0B2545] shrink-0" />
+                    <span className="font-medium">İstanbul & Türkiye Geneli Eğitim Noktaları</span>
+                  </div>
+
+                  <a
+                    href="tel:02168501907"
+                    className="inline-flex items-center gap-1.5 font-bold text-[#0B2545] hover:text-sky-700 hover:underline shrink-0"
+                  >
+                    <span>0216 850 19 07</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Floating Stat Card 1 - Bottom Left Buoyancy */}
+              <div className="hidden sm:flex absolute -bottom-5 -left-6 bg-white/95 backdrop-blur-md p-3 rounded-2xl border border-sky-100 shadow-xl items-center gap-3 animate-float-reverse z-20">
+                <div className="w-10 h-10 rounded-xl bg-sky-100 text-[#0B2545] flex items-center justify-center shrink-0">
+                  <Award className="w-5 h-5 text-[#0B2545]" />
+                </div>
+                <div>
+                  <div className="text-xs font-bold text-slate-900">Uluslararası ILS Denkliği</div>
+                  <div className="text-[10px] text-slate-500">Dünya genelinde geçerli sertifika</div>
+                </div>
+              </div>
+
+              {/* Floating Stat Card 2 - Top Left Badge */}
+              <div className="hidden sm:flex absolute -top-4 -left-4 bg-[#0B2545]/95 text-white backdrop-blur-md px-3.5 py-2 rounded-xl border border-sky-700/50 shadow-xl items-center gap-2 z-20">
+                <Waves className="w-4 h-4 text-sky-400" />
+                <span className="text-xs font-bold font-condensed tracking-wide uppercase">
+                  CANLI EĞİTİM SEZONU
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Left Column (now visually second on mobile): Headlines & Actions */}
+          <div className="lg:col-span-7 lg:order-1 flex flex-col space-y-6">
+            {/* Accreditation Clean Metadata */}
             <div className="flex flex-wrap items-center gap-2 text-xs font-bold text-sky-900 tracking-wider uppercase">
               <span className="flex items-center gap-1.5 text-[#0B2545]">
                 <Waves className="w-3.5 h-3.5 text-[#0B2545]" />
@@ -138,84 +217,6 @@ export const Hero: React.FC<HeroProps> = ({
               <span className="font-semibold text-slate-700">Yasal Bilgilendirme:</span> Su sporları branşlarında
               (Yüzme, Sutopu, Dalış vb.) antrenörlük ve can güvenliği sorumluluğu için Bronz Cankurtaran belgesi kanuni
               ön koşuldur.
-            </div>
-          </div>
-
-          {/* Right Column: Coastal Ocean Rescue Visual Composition with Floating Cards */}
-          <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-lg">
-              {/* Soft decorative water ripple backdrop */}
-              <div className="absolute -inset-2 bg-gradient-to-tr from-sky-400/20 via-cyan-300/15 to-transparent rounded-3xl blur-xl" />
-
-              {/* Main Visual Frame with gentle buoyancy motion */}
-              <div className="relative bg-white rounded-2xl sm:rounded-3xl border border-sky-200/80 shadow-2xl overflow-hidden animate-float-gentle group">
-                {/* Coastal Marine Photography */}
-                <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-900">
-                  <img
-                    src="/assets/images/hero_coastal_ocean_rescue_1793176525153.jpg"
-                    alt="Lifeguard Türkiye Açık Deniz ve Kıyı Güvenlik Eğitimi"
-                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                    referrerPolicy="no-referrer"
-                  />
-                  {/* Subtle coastal lighting overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B2545]/85 via-black/20 to-transparent" />
-
-                  {/* Top-right floating accreditation badge */}
-                  <div className="absolute top-3.5 right-3.5 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/60 shadow-md flex items-center gap-2">
-                    <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                    <div>
-                      <div className="text-[11px] font-extrabold text-[#0B2545] leading-tight">TSSF & ILS ONAYLI</div>
-                      <div className="text-[9px] font-medium text-slate-500">Resmi Belgelendirme</div>
-                    </div>
-                  </div>
-
-                  {/* Overlaid Bottom Title & Info inside Image */}
-                  <div className="absolute bottom-3.5 left-4 right-4 text-white">
-                    <div className="flex items-center gap-1.5 text-xs font-semibold text-sky-200 uppercase tracking-wider mb-1">
-                      <LifeBuoy className="w-3.5 h-3.5 text-sky-300 animate-spin" style={{ animationDuration: '12s' }} />
-                      <span>Deniz ve Kıyı Emniyet Parkurları</span>
-                    </div>
-                    <p className="text-sm sm:text-base font-bold text-white leading-snug drop-shadow-sm">
-                      Mavi Bayraklı Plajlar, Tesisler ve Havuzlar İçin Profesyonel Can Güvenliği
-                    </p>
-                  </div>
-                </div>
-
-                {/* Bottom Interactive & Trust Strip */}
-                <div className="p-4 bg-gradient-to-r from-slate-50 to-sky-50/60 border-t border-sky-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
-                  <div className="flex items-center gap-2 text-slate-700">
-                    <MapPin className="w-4 h-4 text-[#0B2545] shrink-0" />
-                    <span className="font-medium">İstanbul & Türkiye Geneli Eğitim Noktaları</span>
-                  </div>
-
-                  <a
-                    href="tel:02168501907"
-                    className="inline-flex items-center gap-1.5 font-bold text-[#0B2545] hover:text-sky-700 hover:underline shrink-0"
-                  >
-                    <span>0216 850 19 07</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </a>
-                </div>
-              </div>
-
-              {/* Floating Stat Card 1 - Bottom Left Buoyancy */}
-              <div className="hidden sm:flex absolute -bottom-5 -left-6 bg-white/95 backdrop-blur-md p-3 rounded-2xl border border-sky-100 shadow-xl items-center gap-3 animate-float-reverse z-20">
-                <div className="w-10 h-10 rounded-xl bg-sky-100 text-[#0B2545] flex items-center justify-center shrink-0">
-                  <Award className="w-5 h-5 text-[#0B2545]" />
-                </div>
-                <div>
-                  <div className="text-xs font-bold text-slate-900">Uluslararası ILS Denkliği</div>
-                  <div className="text-[10px] text-slate-500">Dünya genelinde geçerli sertifika</div>
-                </div>
-              </div>
-
-              {/* Floating Stat Card 2 - Top Left Badge */}
-              <div className="hidden sm:flex absolute -top-4 -left-4 bg-[#0B2545]/95 text-white backdrop-blur-md px-3.5 py-2 rounded-xl border border-sky-700/50 shadow-xl items-center gap-2 z-20">
-                <Waves className="w-4 h-4 text-sky-400" />
-                <span className="text-xs font-bold font-condensed tracking-wide uppercase">
-                  CANLI EĞİTİM SEZONU
-                </span>
-              </div>
             </div>
           </div>
         </div>
