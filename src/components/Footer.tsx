@@ -4,7 +4,7 @@ import { Phone, Mail, MapPin, Globe, ShieldCheck } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-slate-950 text-slate-400 text-xs border-t border-slate-900 pt-16 pb-12">
+    <footer className="bg-slate-950 text-slate-400 text-xs border-t border-slate-900 pt-16 pb-28 sm:pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-900">
           {/* Col 1 & 2: Brand Information */}
@@ -130,16 +130,30 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Copyright & Disclaimer Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-400 text-[11px]">
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-slate-400 text-[11px]">
           <div>
             © {new Date().getFullYear()} Lifeguard Türkiye (cankurtaranbelgesi.com). Tüm hakları saklıdır.
           </div>
+
+          {/* Designed by Sporsepeti */}
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-800/80 hover:border-slate-700 transition-colors">
+            <span className="text-[11px] text-slate-400 font-medium">Designed by</span>
+            <span className="flex items-center gap-1.5 font-bold text-white text-xs tracking-tight">
+              <img
+                src="/assets/aistudio/images__1__e22ba1d6.jpg"
+                alt="Sporsepeti"
+                className="w-5 h-5 rounded-md object-contain bg-white select-none shadow-xs"
+              />
+              Sporsepeti
+            </span>
+          </div>
+
           <div className="flex items-center gap-3">
             <span>TSSF Yönetmeliklerine Uygundur</span>
             <span>·</span>
             <span>Gizlilik Politikası</span>
             <span>·</span>
-            <span>KVKK Aydınlatma Metni</span>
+            <span>KVKK Aydınlatma</span>
           </div>
         </div>
       </div>
