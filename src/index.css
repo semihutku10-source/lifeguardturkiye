@@ -32,3 +32,97 @@
   font-family: var(--font-sans);
 }
 
+/* Sea wave & ocean fluid animations */
+@keyframes waveFlow1 {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(-25%, 4px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes waveFlow2 {
+  0% {
+    transform: translate3d(-18%, 0, 0);
+  }
+  50% {
+    transform: translate3d(8%, -5px, 0);
+  }
+  100% {
+    transform: translate3d(-18%, 0, 0);
+  }
+}
+
+@keyframes waveFlow3 {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(-12%, 3px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes oceanGlow {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.65;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes floatReverse {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+.animate-wave-slow {
+  animation: waveFlow1 18s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-wave-medium {
+  animation: waveFlow2 12s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-wave-fast {
+  animation: waveFlow3 9s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-ocean-glow {
+  animation: oceanGlow 8s ease-in-out infinite;
+  will-change: opacity, transform;
+}
+
+.animate-float-gentle {
+  animation: floatGentle 5s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: floatReverse 6s ease-in-out infinite;
+}
+
