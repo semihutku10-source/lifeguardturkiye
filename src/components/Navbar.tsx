@@ -16,30 +16,30 @@ export const Navbar: React.FC<NavbarProps> = ({
   return (
     <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* MOBILE LAYOUT (LOGO & MENU ONLY - ENLARGED) */}
-        <div className="flex lg:hidden items-center justify-between h-28 px-4 relative">
-          {/* Left Spacer */}
-          <div className="w-12" /> 
+        {/* MOBILE LAYOUT (MAXIMIZED LOGO AREA) */}
+        <div className="flex lg:hidden items-center justify-between h-40 px-6 relative">
+          {/* Left Side: Empty for balance */}
+          <div className="w-10" />
 
-          {/* Center: Prominent Logo */}
+          {/* Center: Massive Logo to fill the red square area requested */}
           <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
             <a href="#" className="flex items-center">
               <BrandLogo 
                 size="xl" 
-                className="scale-[1.45] origin-center"
+                className="scale-[2.4] origin-center"
                 showAccreditationBadges={false} 
               />
             </a>
           </div>
 
-          {/* Right Side: Menu Button */}
+          {/* Right Side: Menu Button (Standard size) */}
           <div className="z-10">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="w-12 h-12 flex items-center justify-center rounded-xl text-slate-700 bg-slate-50/50 border border-slate-100/50 active:bg-slate-200 transition-colors"
+              className="w-11 h-11 flex items-center justify-center rounded-xl text-slate-700 bg-slate-50 border border-slate-100 active:bg-slate-100 transition-colors"
               aria-label="Menü"
             >
-              {mobileMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
