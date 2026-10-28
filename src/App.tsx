@@ -125,9 +125,6 @@ export default function App() {
       {/* Footer */}
       <Footer />
 
-      {/* Persistent Mobile Bottom Action Bar (<=15% viewport height cap) */}
-      <MobileBottomBar onOpenRegistration={() => handleOpenRegistration('bronz')} />
-
       {/* Blog Article Detail Reading Modal */}
       <BlogDetailModal
         post={selectedPost}

@@ -32,7 +32,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
         }`}
       >
         <img
-          src="/assets/aistudio/Gemini_Generated_Image_tzc0autzc0autzc0_40bc3f9f.png"
+          src="/assets/aistudio/Ads_z_Tasar_m__2__1a0b90b3.png"
           alt="Lifeguard Türkiye"
           className={`${heightClass} ${imageClassName} w-auto object-contain select-none`}
           referrerPolicy="no-referrer"
